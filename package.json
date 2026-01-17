@@ -1,19 +1,24 @@
 {
   "name": "mdukaan-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
+  "description": "Multi-tenant billing & inventory backend",
+  "main": "build/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node src/app.ts\"",
+    "start": "ts-node src/app.ts"
   },
   "dependencies": {
-    "express": "^4.19.0",
-    "pg": "^8.11.3",
     "dotenv": "^16.4.0",
-    "jsonwebtoken": "^9.0.2"
+    "express": "^4.19.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.3"
   },
-  "author": "Manishkumar Vishwakarma",
-  "license": "ISC"
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.9",
+    "@types/pg": "^8.16.0",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
 }
